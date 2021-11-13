@@ -5,7 +5,13 @@ namespace App\Controllers;
 class Controller
 {
 
-    public function render() {
-        //cette fonction affiche les methodes des autre classe controllers
+    /**
+     * affiche une vue
+     * @param $path
+     */
+    public function views($path) {
+
+        require_once "app/views/$path.php";
     }
+
 }

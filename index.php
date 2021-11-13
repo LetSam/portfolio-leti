@@ -1,13 +1,13 @@
 <?php
 
 
-use App\Controllers\Controller;
+use App\Controllers\HomeController;
 
 require_once "vendor/autoload.php";
 
-$test = new Controller();
+$test = new HomeController();
 
-$test->sayHelo();
+$test->home();
 
 
 //  on recupere notre URL
