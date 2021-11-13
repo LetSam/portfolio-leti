@@ -1,5 +1,15 @@
 <?php
 
+
+use App\Controllers\Controller;
+
+require_once "vendor/autoload.php";
+
+$test = new Controller();
+
+$test->sayHelo();
+
+
 //  on recupere notre URL
 $url = $_GET["page"];
 
