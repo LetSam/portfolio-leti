@@ -7,11 +7,59 @@ require_once "vendor/autoload.php";
 
 $test = new HomeController();
 
-$test->home();
 
+echo "<pre>";
 
 //  on recupere notre URL
-$url = $_GET["page"];
+$page = $_GET["page"];
+
+
+// traitement de notre url
+
+try {
+    // on traie le cas où l'url est sur index.php ( donc vide )
+    if ( empty($_GET["page"]) ) {
+        $test->home();
+    } else {
+
+    }
+
+} catch (Exception $e) {
+    die( $e->getMessage() );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// on va casser notre url pour savoir si on a plusieur demande
+$page = explode('/', $page);
+var_dump($page);
 
 if (isset($url) && !empty($url)) {
 
@@ -21,7 +69,7 @@ if (isset($url) && !empty($url)) {
             case "/" :
             case "home":
             case "acceuil":
-                echo "page d'acceuil";
+                $test->home();
                 break;
             case "contact" :
                 echo "page de contact";
