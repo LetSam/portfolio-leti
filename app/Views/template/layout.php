@@ -24,55 +24,36 @@
             </div>
         </section>
 
-        <section >
+        <!-- COMPETENNCES -->
+        <section class="competences-card" >
+            <h2 class="competence-title"> Mes compétences </h2>
+            <div class="competence-content">
+                <div class="competence">
+                    <div class="items">
+                        <h3>
+                            <i class="uil uil-brackets-curly"></i> Front
+                        </h3>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
 
-            <div class="competence">
-                <h2>Ce que je sais faire & apprend</h2>
-                <div class="competence-items">
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-html5"></i></div>
-                        <div class="item-name">html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-css3-alt"></i></div>
-                        <div class="item-name">css3</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-js-square"></i></div>
-                        <div class="item-name">html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-php"></i></div>
-                        <div class="item-name"> html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-python"></i></div>
-                        <div class="item-name">html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-html5"></i></div>
-                        <div class="item-name">html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-css3-alt"></i></div>
-                        <div class="item-name">css3</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-js-square"></i></div>
-                        <div class="item-name">html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-php"></i></div>
-                        <div class="item-name"> html5</div>
-                    </div>
-                    <div class="competence-items-card">
-                        <div class="item"><i class="fab fa-python"></i></div>
-                        <div class="item-name">html5</div>
+                        <h3>
+                            <i class="uil uil-programming-language icone"></i> Back
+                        </h3>
+                        <span>PHP</span>
+                        <span>PYTHON</span>
+
+                        <h3>
+                            <i class="uil uil-object-group icone"></i> Design
+                        </h3>
+                        <span>Photoshop</span>
+                        <span>Illustrator</span>
+                        <span>Adobe xd</span>
                     </div>
                 </div>
-            </div>
-            <div class="competence">
-                <img src="public/images/dev.png" alt="">
+                <div class="competence-img">
+                    <img src="public/images/img1.png" alt="">
+                </div>
             </div>
         </section>
 

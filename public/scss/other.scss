@@ -99,3 +99,55 @@ body{
     }
   }
 }
+
+.competences-card {
+  border: 5px solid green;
+
+  .competence-title {
+    font-size: 2.4em;
+    margin: 32px 29px;
+  }
+
+  .competence-content {
+    border: 5px solid pink;
+    min-height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+  }
+  .competence {
+    width: 45%;
+    border: 5px solid green;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+
+    h3 {
+      font-size: 1.5em;
+      color: red;
+      border-radius: 9px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+    .items {
+      span {
+        border:1px solid #A892B8;
+        padding: 10px 15px;
+        font-size: 17px;
+        background: #2F283F;
+        border-radius: 9px;
+      }
+    }
+
+  }
+  .competence-img {
+    width: 45%;
+    border: 5px solid green;
+
+    img {
+      width:100%;
+      height:100%;
+    }
+  }
+}
