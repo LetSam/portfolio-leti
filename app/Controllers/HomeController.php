@@ -10,6 +10,6 @@ class HomeController extends Controller {
      */
     public function home()
     {
-        $this->views("home");
+        $this->views("template/layout");
     }
 }
