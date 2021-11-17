@@ -5,12 +5,10 @@ use App\Controllers\HomeController;
 require_once "vendor/autoload.php";
 
 $app = new HomeController();
-//  on recupere notre URL
-$page = $_GET["page"];
-
 // on casse l'url
 
-$page = explode('/', $page);
+$page = explode('/', filter_var($_GET["page"]), FILTER_SANITIZE_URL);
+
 
 // traitement de notre url
 
