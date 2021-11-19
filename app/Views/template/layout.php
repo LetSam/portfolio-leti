@@ -70,22 +70,15 @@
         </section>
 
         <section>
-        <span id="left"> &lt;</span>
             <div class="project-card">
                 <div class="projects-filter"></div>
                 <div class="projects">
                    <img src="public/images/bg2.png" alt="">
-                   <img src="public/images/bg2.png" alt="">
-                   <img src="public/images/bg2.png" alt="">
                 </div>
             </div>
-            
-            <span id="right"> &gt;</span>
             <div style="width: 100%">
                 <a href="">Tous mes projets</a>
             </div>
-            
-            
         </section>
 
     </div>

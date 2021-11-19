@@ -9,8 +9,6 @@ body {
   padding: 0;
 }
 
-#left, #right {font-size: 50px;}
-.projects{ display: flex; align-items: center;}
 .container {
   background: url("../../public/images/bg2.png") center center no-repeat;
   background-size: cover;
