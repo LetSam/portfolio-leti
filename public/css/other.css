@@ -1,137 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Expected identifier.
+ *    ,
+ * 29 |   &:@media blue("<=800px"){
+ *    |     ^
+ *    '
+ *   scss\other.scss 29:5  root stylesheet */
 
-body {
-  margin: 0;
-  padding: 0;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Expected identifier.\a    \2577 \a 29 \2502    &:@media blue("<=800px"){\d\a    \2502      ^\a    \2575 \a   scss\\other.scss 29:5  root stylesheet';
 }
-
-.container {
-  background: url("../../public/images/bg2.png") center center no-repeat;
-  background-size: cover;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  scroll-behavior: smooth;
-  overflow-x: auto;
-  scroll-snap-type: y mandatory;
-}
-.container section {
-  width: 100%;
-  height: 100vh;
-  scroll-snap-align: start;
-}
-.container section:nth-of-type(1) {
-  background: rgba(47, 40, 63, 0.36);
-  display: flex;
-  align-items: center;
-  color: white;
-}
-.container section:nth-of-type(2) {
-  background: #F9F9F9;
-  color: red;
-}
-.container section:nth-of-type(3) {
-  background: gray;
-  color: black;
-}
-.container section .presentation {
-  margin-left: 80px;
-  width: 45%;
-}
-.container section .presentation h1 {
-  font-size: 3em;
-  margin-bottom: 23px;
-}
-.container section .presentation p {
-  font-size: 19px;
-  margin-bottom: 33px;
-}
-.container section .presentation .btn-contact {
-  padding: 13px 23px;
-  background: #7dc5f5;
-  border-radius: 6px;
-  font-size: 17px;
-  color: white;
-  text-decoration: none;
-}
-.container section .presentation .btn-contact:hover {
-  background: #a186b5;
-}
-
-.competence {
-  padding: 50px 0;
-  width: 43%;
-  border: 2px solid red;
-}
-.competence h2 {
-  font-size: 1.5em;
-  margin-bottom: 40px;
-}
-.competence .competence-items {
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-.competence .competence-items .competence-items-card {
-  margin: 9px 19px;
-}
-.competence .competence-items .item {
-  font-size: 60px;
-  color: #615E87;
-}
-.competence .competence-items .item-name {
-  font-size: 10px;
-  color: #918EB8;
-}
-
-.competences-card {
-  border: 5px solid green;
-}
-.competences-card .competence-title {
-  font-size: 2.4em;
-  margin: 32px 29px;
-}
-.competences-card .competence-content {
-  border: 5px solid pink;
-  min-height: 70vh;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  justify-content: space-around;
-}
-.competences-card .competence {
-  width: 45%;
-  border: 5px solid green;
-  padding: 0 50px;
-  display: flex;
-  align-items: center;
-}
-.competences-card .competence h3 {
-  font-size: 1.5em;
-  color: red;
-  border-radius: 9px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-.competences-card .competence .items span {
-  border: 1px solid #A892B8;
-  padding: 10px 15px;
-  font-size: 17px;
-  background: #2F283F;
-  border-radius: 9px;
-}
-.competences-card .competence-img {
-  width: 45%;
-  border: 5px solid green;
-}
-.competences-card .competence-img img {
-  width: 100%;
-  height: 100%;
-}
-
-/*# sourceMappingURL=other.css.map */

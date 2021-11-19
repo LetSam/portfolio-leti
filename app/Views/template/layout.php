@@ -57,8 +57,45 @@
             </div>
         </section>
 
-        <section >
-            <h1>page one </h1>
+        <section class="project">
+            <h2> Mes projets </h2>
+            <div class="projets-card swiper ">
+                <div class="swiper-wrapper">
+
+                    <div class="projets-item swiper-slide">
+                        <img src="src/images/img2.png" alt="" class="projets-img">
+                        <div class="button-projets">
+                            <a href="#projets" class="btn-projet button"> Plus d'infos </a>
+                        </div>
+                    </div>
+
+                    <div class="projets-item swiper-slide">
+                        <img src="src/images/img3.png" alt="" class="projets-img">
+
+                        <div class="button-projets">
+                            <a href="#" class="btn-projet button"> Plus d'infos </a>
+                        </div>
+                    </div>
+
+                    <div class="projets-item swiper-slide">
+                        <img src="src/images/img4.png" alt="" class="projets-img">
+
+                        <div class="button-projets">
+                            <a href="#" class="btn-projet button"> Plus d'infos </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- ARROWS -->
+                <div class="swiper-button-next">
+                    <i class="uil uil-angle-right-b swiper-projets-icon"></i>
+                </div>
+                <div class="swiper-button-prev">
+                    <i class="uil uil-angle-left-b swiper-projets-icon"></i>
+                </div>
+
+                <div class="swiper-pagination"></div>
+            </div>
+            <a class="project-btn" href="#">Voir tous mes projets</a>
         </section>
 
     </div>

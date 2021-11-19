@@ -9,6 +9,11 @@ body{
   padding: 0;
 }
 
+h2 {
+  font-size: 2.4em;
+  margin-bottom: 40px;
+}
+
 .container {
 
   background: url("../../public/images/bg2.png") center center no-repeat;
@@ -37,8 +42,9 @@ body{
       color: red;
     }
     &:nth-of-type(3) {
-      background: gray;
-      color: black;
+      background-color: #5E5B84;
+      color: white;
+      font-size: 17px;
     }
 
     .presentation {
@@ -70,15 +76,12 @@ body{
   }
 }
 
+
+
 .competence {
   padding: 50px 0;
   width: 43%;
   border: 2px solid red;
-
-  h2 {
-    font-size: 1.5em;
-    margin-bottom: 40px;
-  }
   .competence-items {
     width: 100%;
     text-align: center;
@@ -101,15 +104,8 @@ body{
 }
 
 .competences-card {
-  border: 5px solid green;
-
-  .competence-title {
-    font-size: 2.4em;
-    margin: 32px 29px;
-  }
-
+  border: 1px solid white; // TODO
   .competence-content {
-    border: 5px solid pink;
     min-height: 70vh;
     display: flex;
     flex-wrap: wrap;
@@ -118,7 +114,6 @@ body{
   }
   .competence {
     width: 45%;
-    border: 5px solid green;
     padding: 0 50px;
     display: flex;
     align-items: center;
@@ -143,11 +138,26 @@ body{
   }
   .competence-img {
     width: 45%;
-    border: 5px solid green;
-
     img {
       width:100%;
       height:100%;
     }
   }
+}
+
+.project-card {
+  height: 100vh;
+  background-color: #5E5B84;
+  color: white;
+  font-size: 17px;
+
+  .project {
+    height: 80vh;
+
+  }
+
+  .project-btn {
+    padding: 15px 20px;
+  }
+
 }
