@@ -9,16 +9,9 @@ body{
   padding: 0;
 }
 
-h2 {
-  font-size: 2.4em;
-  margin-bottom: 40px;
-}
-
 .container {
-
   background: url("../../public/images/bg2.png") center center no-repeat;
   background-size: cover;
-
   position: relative;
   width: 100%;
   height: 100vh;
@@ -26,13 +19,22 @@ h2 {
   overflow-x: auto;
   scroll-snap-type: y mandatory;
 
+  h1 {
+    font-size: 3em;
+    margin-bottom: 23px;
+  }
+  p {
+    font-size: 19px;
+    margin-bottom: 33px;
+  }
+
   section {
     width: 100%;
     height: 100vh;
     scroll-snap-align: start;
 
     &:nth-of-type(1) {
-      background: rgba(47, 40, 63, 0.36);
+      background: rgba(1, 1, 1, 0.59);
       display: flex;
       align-items: center;
       color: white;
@@ -42,122 +44,147 @@ h2 {
       color: red;
     }
     &:nth-of-type(3) {
-      background-color: #5E5B84;
+      background-color: #032145;
       color: white;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
       font-size: 17px;
     }
+  }
 
-    .presentation {
-      margin-left: 80px;
+  .presentation {
+    margin-left: 80px;
+    width: 55%;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 23px;
+    }
+
+    p {
+      font-size: 19px;
+      margin-bottom: 33px;
+    }
+
+    .btn-contact {
+      padding: 13px 23px;
+      background: #7dc5f5;
+      border-radius: 6px;
+      font-size: 17px;
+      color: white;
+      text-decoration: none;
+
+      &:hover {
+        background: #a186b5;
+      }
+    }
+  }
+
+  .competences-card {
+    border: 1px solid white; // TODO
+    .competence-content {
+      min-height: 70vh;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+      justify-content: space-around;
+    }
+    .competence {
       width: 45%;
+      padding: 0 50px;
+      display: flex;
+      align-items: center;
 
-      h1 {
-        font-size: 3em;
-        margin-bottom: 23px;
+      h3 {
+        font-size: 1.5em;
+        color: red;
+        border-radius: 9px;
+        margin-top: 40px;
+        margin-bottom: 20px;
       }
-      p {
-        font-size: 19px;
-        margin-bottom: 33px;
-      }
-
-      .btn-contact {
-        padding: 13px 23px;
-        background: #7dc5f5;
-        border-radius: 6px;
-        font-size: 17px;
-        color: white;
-        text-decoration: none;
-
-        &:hover {
-          background: #a186b5;
+      .items-card {
+        span {
+          border:1px solid #A892B8;
+          padding: 10px 15px;
+          font-size: 17px;
+          background: #2F283F;
+          border-radius: 9px;
+        }
+        .item {
+          display: flex;
+          flex-wrap: wrap;
+          span {
+            margin: 5px 3px;
+            border:1px solid #A892B8;
+            padding: 10px 15px;
+            font-size: 17px;
+            background: #2F283F;
+            border-radius: 9px;
+          }
         }
       }
+
+    }
+
+    .competence-img {
+      width: 45%;
+      img {
+        width:100%;
+        height:100%;
+      }
     }
   }
-}
 
 
-
-.competence {
-  padding: 50px 0;
-  width: 43%;
-  border: 2px solid red;
-  .competence-items {
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-
-    .competence-items-card {
-      margin: 9px 19px;
-    }
-    .item {
-      font-size: 60px;
-      color: #615E87;
-    }
-
-    .item-name {
-      font-size: 10px;
-      color: #918EB8;
-    }
-  }
-}
-
-.competences-card {
-  border: 1px solid white; // TODO
-  .competence-content {
-    min-height: 70vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: space-around;
-  }
-  .competence {
-    width: 45%;
-    padding: 0 50px;
+  .project-card {
+    color: red;
+    width: 80%;
+    height: 70vh;
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    h3 {
-      font-size: 1.5em;
-      color: red;
-      border-radius: 9px;
-      margin-top: 40px;
-      margin-bottom: 20px;
+    .projects-filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(3, 33, 69, 0.16);
+
+
     }
-    .items {
-      span {
-        border:1px solid #A892B8;
-        padding: 10px 15px;
-        font-size: 17px;
-        background: #2F283F;
-        border-radius: 9px;
+    .projects {
+      width: 60%;
+      height: 90%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width : 482px) {
+    background-color: green;
+
+    .presentation {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .competences-card {
+      .competence {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .competence-img {
+        display: none;
       }
     }
 
-  }
-  .competence-img {
-    width: 45%;
-    img {
-      width:100%;
-      height:100%;
-    }
-  }
-}
-
-.project-card {
-  height: 100vh;
-  background-color: #5E5B84;
-  color: white;
-  font-size: 17px;
-
-  .project {
-    height: 80vh;
-
-  }
-
-  .project-btn {
-    padding: 15px 20px;
   }
 
 }

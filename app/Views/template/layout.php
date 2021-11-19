@@ -29,26 +29,38 @@
             <h2 class="competence-title"> Mes compétences </h2>
             <div class="competence-content">
                 <div class="competence">
-                    <div class="items">
-                        <h3>
-                            <i class="uil uil-brackets-curly"></i> Front
-                        </h3>
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JS</span>
+                    <div class="items-card">
+                        <div class="items-labelle">
+                            <h3>
+                                <i class="uil uil-brackets-curly"></i> Front
+                            </h3>
+                            <div class="item">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
 
-                        <h3>
-                            <i class="uil uil-programming-language icone"></i> Back
-                        </h3>
-                        <span>PHP</span>
-                        <span>PYTHON</span>
+                        <div class="items-labelle">
+                            <h3>
+                                <i class="uil uil-programming-language icone"></i> Back
+                            </h3>
+                            <div class="item">
+                                <span>PHP</span>
+                                <span>PYTHON</span>
+                            </div>
+                        </div>
 
-                        <h3>
-                            <i class="uil uil-object-group icone"></i> Design
-                        </h3>
-                        <span>Photoshop</span>
-                        <span>Illustrator</span>
-                        <span>Adobe xd</span>
+                        <div class="items-labelle">
+                            <h3>
+                                <i class="uil uil-object-group icone"></i> Design
+                            </h3>
+                            <div class="item">
+                                <span>Photoshop</span>
+                                <span>Illustrator</span>
+                                <span>Adobe xd</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="competence-img">
@@ -57,45 +69,16 @@
             </div>
         </section>
 
-        <section class="project">
-            <h2> Mes projets </h2>
-            <div class="projets-card swiper ">
-                <div class="swiper-wrapper">
-
-                    <div class="projets-item swiper-slide">
-                        <img src="src/images/img2.png" alt="" class="projets-img">
-                        <div class="button-projets">
-                            <a href="#projets" class="btn-projet button"> Plus d'infos </a>
-                        </div>
-                    </div>
-
-                    <div class="projets-item swiper-slide">
-                        <img src="src/images/img3.png" alt="" class="projets-img">
-
-                        <div class="button-projets">
-                            <a href="#" class="btn-projet button"> Plus d'infos </a>
-                        </div>
-                    </div>
-
-                    <div class="projets-item swiper-slide">
-                        <img src="src/images/img4.png" alt="" class="projets-img">
-
-                        <div class="button-projets">
-                            <a href="#" class="btn-projet button"> Plus d'infos </a>
-                        </div>
-                    </div>
+        <section>
+            <div class="project-card">
+                <div class="projects-filter"></div>
+                <div class="projects">
+                   <img src="public/images/bg2.png" alt="">
                 </div>
-                <!-- ARROWS -->
-                <div class="swiper-button-next">
-                    <i class="uil uil-angle-right-b swiper-projets-icon"></i>
-                </div>
-                <div class="swiper-button-prev">
-                    <i class="uil uil-angle-left-b swiper-projets-icon"></i>
-                </div>
-
-                <div class="swiper-pagination"></div>
             </div>
-            <a class="project-btn" href="#">Voir tous mes projets</a>
+            <div style="width: 100%">
+                <a href="">Tous mes projets</a>
+            </div>
         </section>
 
     </div>
