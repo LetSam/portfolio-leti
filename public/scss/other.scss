@@ -147,24 +147,91 @@ body{
     align-items: center;
     justify-content: center;
 
-    .projects-filter {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(3, 33, 69, 0.16);
 
+    #left, 
+    #right{
+      font-size: 50px;
+      color: white;
+      position: absolute;
+      cursor: pointer;
+      width: auto;
+      font-weight: bold;
+      transition: .5s ease;
+      user-select: none;
 
     }
-    .projects {
-      width: 60%;
+
+    #right{
+      right: 40px;
+    }
+
+    #left{
+      left: 40px;
+      
+    }
+
+    #left:hover, 
+    #right:hover{
+      color: rgb(238, 235, 235);
+    }
+
+    .text{
+      color: red;
+      font-size: 19px;
+      position: absolute;
+      text-align: center;
+      bottom: 50px;
+      width: 100%;
+    }
+
+    .project-item{
+
+      width: 50%;
       height: 90%;
-      img {
+
+
+      .mySlide{
         width: 100%;
         height: 100%;
+        position: relative;
+        background-color: white;
+        
+        img{
+          width: 100%;
+          height: 100%;
+        }
       }
     }
+
+    
+  }
+
+  .fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1s;
+    animation-name: fade;
+    animation-duration: 1s;
+  }
+
+  @-webkit-keyframes fade {
+    from{opacity: .4}
+    to{opacity: 1}
+  }
+
+  @keyframes fade {
+    from{opacity: .4}
+    to{opacity: 1}
+  }
+
+  .allProjects{
+    background-color: red;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 10px 19px;
+    border-radius: 8px;
+     
   }
 
   @media screen and (max-width : 482px) {

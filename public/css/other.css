@@ -132,21 +132,79 @@ body {
   align-items: center;
   justify-content: center;
 }
-.container .project-card .projects-filter {
+.container .project-card #left,
+.container .project-card #right {
+  font-size: 50px;
+  color: white;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(3, 33, 69, 0.16);
+  cursor: pointer;
+  width: auto;
+  font-weight: bold;
+  transition: 0.5s ease;
+  user-select: none;
 }
-.container .project-card .projects {
-  width: 60%;
+.container .project-card #right {
+  right: 40px;
+}
+.container .project-card #left {
+  left: 40px;
+}
+.container .project-card #left:hover,
+.container .project-card #right:hover {
+  color: #eeebeb;
+}
+.container .project-card .text {
+  color: red;
+  font-size: 19px;
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  width: 100%;
+}
+.container .project-card .project-item {
+  width: 50%;
   height: 90%;
 }
-.container .project-card .projects img {
+.container .project-card .project-item .mySlide {
   width: 100%;
   height: 100%;
+  position: relative;
+  background-color: white;
+}
+.container .project-card .project-item .mySlide img {
+  width: 100%;
+  height: 100%;
+}
+.container .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container .allProjects {
+  background-color: red;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 10px 19px;
+  border-radius: 8px;
 }
 @media screen and (max-width: 482px) {
   .container {

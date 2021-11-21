@@ -2,9 +2,11 @@
 
 
 use App\Controllers\HomeController;
+use App\Controllers\ContactController;
 require_once "vendor/autoload.php";
 
 $app = new HomeController();
+$contact = new ContactController();
 // on casse l'url
 
 $page = explode('/', filter_var($_GET["page"]), FILTER_SANITIZE_URL);
@@ -22,6 +24,9 @@ try {
             case '/':
             case 'home':
                 $app->home();
+                break;
+            case 'contact':
+                $contact->contact();
                 break;
             case 'admin':
                 if ($page[1] === 'dashboard') {

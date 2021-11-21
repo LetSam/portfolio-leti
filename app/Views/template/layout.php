@@ -70,17 +70,66 @@
         </section>
 
         <section>
+
             <div class="project-card">
-                <div class="projects-filter"></div>
-                <div class="projects">
-                   <img src="public/images/bg2.png" alt="">
+                <span onclick="getSlides(-1)" id="left"> <i class="fas fa-arrow-circle-left"></i></span>
+                <span onclick="getSlides(1)" id="right"> <i class="fas fa-arrow-circle-right"></i></span>
+                <div class="project-item">
+                        <div class="mySlide fade"> 
+                            <img src="public/images/mesProjets/projet.png" alt="">
+                            <div class="text"> PHP - HTML/CSS/JS
+                                <br><a href="">Voir plus</a> </div>
+                        </div>
+                        <div class="mySlide fade"> 
+                            <img src="public/images/dev.png" alt="">
+                            <div class="text"> PHP - HTML/CSS/JS </div>
+                        </div>
+                        <div class="mySlide fade"> 
+                            <img src="public/images/bg2.png" alt="">
+                            <div class="text"> PHP - HTML/CSS/JS </div>
+                        </div>
                 </div>
             </div>
-            <div style="width: 100%">
-                <a href="">Tous mes projets</a>
+            
+            
+
+            <div style="width: 100%; display:flex; align-items:center; justify-content:center;">
+                <div>
+                    <a class="allProjects" href="">Tous mes projets</a>
+                </div>
             </div>
+
+        </section>
+
+        <section>
+            <div class="contact">
+                <div class="contact-form">
+                <form action="/contact" method="post">
+                    <label for="fname">Votre nom</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Votre nom">
+
+                    <label for="lname">Votre prénom"</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Votre prénom">
+
+                    <label for="subject">Sujet</label>
+                    <select id="subject" name="subject">
+                    <option value="entretien">Entretien</option>
+                    <option value="contact">Contact</option>
+                    <option value="autre">Autre</option>
+                    </select>
+
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Message" rows="6"></textarea>
+
+                    <label for="contact-rgpd">
+                        <input class="js-verif-rgpd" id="contact-rgpd" type="checkbox" name="rgpd">
+                            J'accepte les conditions d'utilisations.   
+                    </label>
+                    <input type="submit" value="Submit">
+                </form>
         </section>
 
     </div>
+    <script src="public/js/main.js"></script>
 </body>
 </html>
