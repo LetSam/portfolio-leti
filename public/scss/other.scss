@@ -52,6 +52,15 @@ body{
       justify-content: center;
       font-size: 17px;
     }
+    &:nth-of-type(4) {
+      background-color: white;
+
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+    }
   }
 
   .presentation {
@@ -252,6 +261,59 @@ body{
       }
     }
 
+  }
+
+  form {
+    padding-left:25px;
+    padding-right:25px;
+    padding-top:60px;
+    margin: 12px auto;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    position:relative;
+    z-index:1;
+  }
+
+  form > div{
+    position:absolute;
+    top:0;
+    left:50%;
+    padding:0 20px;
+    transform:translate(-50%,-50%);
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    text-align:center;
+  }
+
+
+  form > input,
+  form > select,
+  form > textarea {
+    padding: 12px;
+    margin: 12px auto;
+    border: 1px solid #ccc;
+    color: #1a1919;
+    background-color: #dbd8d8;
+    border-radius: 4px;
+    display: block;
+    width: 50vw;
+  }
+
+  form > textarea{
+    height:100px;
+    resize:none;
+  }
+
+  form > input[type="submit"] {
+    max-width: 15vw;
+    padding-left: 1%;
+    padding-right: 1%;
+    cursor: pointer;
+    transition: 0.35s;
+  }
+
+  form > input[type="submit"]:hover {
+    background-color: #354731;
   }
 
 }

@@ -51,6 +51,14 @@ body {
   justify-content: center;
   font-size: 17px;
 }
+.container section:nth-of-type(4) {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+}
 .container .presentation {
   margin-left: 80px;
   width: 55%;
@@ -221,6 +229,52 @@ body {
   .container .competences-card .competence-img {
     display: none;
   }
+}
+.container form {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+  margin: 12px auto;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+.container form > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  padding: 0 20px;
+  transform: translate(-50%, -50%);
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  text-align: center;
+}
+.container form > input,
+.container form > select,
+.container form > textarea {
+  padding: 12px;
+  margin: 12px auto;
+  border: 1px solid #ccc;
+  color: #1a1919;
+  background-color: #dbd8d8;
+  border-radius: 4px;
+  display: block;
+  width: 50vw;
+}
+.container form > textarea {
+  height: 100px;
+  resize: none;
+}
+.container form > input[type=submit] {
+  max-width: 15vw;
+  padding-left: 1%;
+  padding-right: 1%;
+  cursor: pointer;
+  transition: 0.35s;
+}
+.container form > input[type=submit]:hover {
+  background-color: #354731;
 }
 
 /*# sourceMappingURL=other.css.map */
