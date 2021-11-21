@@ -11,6 +11,17 @@
 </head>
 <body>
 
+<?php if (isset($_SESSION["alert"])): ?>
+    <div >
+        <div >
+            <div>
+                <div>
+                    <?=$_SESSION["alert"]['message'] ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php unset($_SESSION["alert"]); endif; ?>
 
 <div class="container">
 
@@ -103,9 +114,12 @@
     </section>
 
     <section>
+        <div style="width: 100vw">
+            <h1>Contactez-moi</h1>
+        </div>
         <div class="contact">
             <div class="contact-form">
-                <form action="portfolio-leti/contact" method="post">
+                <form action="contact" method="post">
                     <select name="job" id="job" required>
                         <option value="">--Choisir--</option>
                         <option value="interview">Proposition d'entretient</option>

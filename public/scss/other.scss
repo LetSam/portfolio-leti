@@ -263,6 +263,10 @@ body{
 
   }
 
+  .contact {
+
+  }
+
   form {
     padding-left:25px;
     padding-right:25px;
@@ -272,6 +276,7 @@ body{
     border-radius: 20px;
     position:relative;
     z-index:1;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
 
   form > div{

@@ -1,8 +1,9 @@
 <?php
 
-
+session_start();
 use App\Controllers\HomeController;
 use App\Controllers\ContactController;
+
 require_once "vendor/autoload.php";
 
 $app = new HomeController();
