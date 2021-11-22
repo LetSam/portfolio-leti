@@ -58,20 +58,23 @@ class ContactController extends Controller
                 $mail->send();
 
                 $_SESSION["alert"] = [
-                    "message" => "Merci, votre message a bien été envoyé !"
+                    "message" => "Merci, votre message a bien été envoyé",
+                    "color" => "green"
                 ];
 
             } catch (Exception $ex) {
                 $_SESSION["alert"] = [
                     "message" => "Votre message n'a pas pu être envoyé",
+                    "color" => "red"
                 ];
             }
         } else {
             $_SESSION["alert"] = [
-                "message" => "Votre message n'a pas pu être envoyé"
+                "message" => "Votre message n'a pas pu être envoyé",
+                "color" => "red"
             ];
         }
-        header('Location:/fichiers/portfolio-leti');
+        header('Location:/portfolio-leti');
         die();
 
 

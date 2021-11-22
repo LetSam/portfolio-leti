@@ -12,11 +12,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="public/css/variables.css">
     <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title><?= $title ?></title>
     
 </head>
 
 <body>
+
+
     <?php include_once "header.php" ?>
 
     <main class="main"> <?= $contents; ?> </main>
@@ -26,7 +29,6 @@
         include_once "app/views/frontAlert/sendMailAlert.php";
     ?>
 
-    
     <!-- SCROLL UP -->
     <a href="#" class="scroll-up" id="scroll-up">
         <i class="uil uil-arrow-up scroll-up-icon"></i>
