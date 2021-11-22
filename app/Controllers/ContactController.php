@@ -57,17 +57,17 @@ class ContactController extends Controller
 
                 $mail->send();
 
-                $_SESSION["alert"] = [
+                $_SESSION["frontAlert"] = [
                     "message" => "Merci, votre message a bien été envoyé !"
                 ];
 
             } catch (Exception $ex) {
-                $_SESSION["alert"] = [
+                $_SESSION["frontAlert"] = [
                     "message" => "Votre message n'a pas pu être envoyé",
                 ];
             }
         } else {
-            $_SESSION["alert"] = [
+            $_SESSION["frontAlert"] = [
                 "message" => "Votre message n'a pas pu être envoyé"
             ];
         }

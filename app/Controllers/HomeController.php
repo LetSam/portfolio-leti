@@ -10,6 +10,6 @@ class HomeController extends Controller {
      */
     public function home()
     {
-        $this->views("template/layout");
+        $this->views("Portfolio - Liticia TADJER", "Page du portfolio", "home");
     }
 }
