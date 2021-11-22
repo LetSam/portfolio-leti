@@ -23,7 +23,7 @@
 
     <?php
         include_once "footer.php";
-        include_once "../frontAlert/sendMailAlert.php";
+        include_once "app/views/frontAlert/sendMailAlert.php";
     ?>
 
     

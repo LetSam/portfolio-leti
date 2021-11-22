@@ -1,11 +1,11 @@
-<?php if (isset($_SESSION["frontAlert"])): ?>
+<?php if (isset($_SESSION["alert"])): ?>
     <div >
         <div>
             <div>
                 <div>
-                    <?=$_SESSION["frontAlert"]['message'] ?>
+                    <?=$_SESSION["alert"]['message'] ?>
                 </div>
             </div>
         </div>
     </div>
-    <?php unset($_SESSION["frontAlert"]); endif; ?>
+    <?php unset($_SESSION["alert"]); endif; ?>
