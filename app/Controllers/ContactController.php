@@ -36,21 +36,21 @@ class ContactController extends Controller
                 $mail->isSMTP();
                 $mail->SMTPAuth= true;
                 $mail->Host = 'smtp.gmail.com';
-                $mail->Username= 'tadjerliticia@gmail.com';
-                $mail->Password= 'letty@L021112/';
+                $mail->Username= 'liticiatadjer35@gmail.com';
+                $mail->Password= 'Letty@021112/';
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = "587";
 
                 // charset
                 $mail->CharSet = "UTF-8";
                 // destinataire
-                $mail->addAddress("tadjerliticia@gmail.com");
+                $mail->addAddress("liticiatadjer35@gmail.com");
                 // expediteur
                 $mail->setFrom($email);
 
                 // contenu
                 $mail->isHTML(true);
-                $mail->Subject = 'PORTEFOLIO MESSAGE'.$email;
+                $mail->Subject = 'PORTFOLIO MESSAGE'.$email;
                 $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
 
                 // envoi du message
@@ -71,7 +71,7 @@ class ContactController extends Controller
                 "message" => "Votre message n'a pas pu être envoyé"
             ];
         }
-        header('Location:/portfolio-leti');
+        header('Location:/fichiers/portfolio-leti');
         die();
 
 
