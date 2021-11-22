@@ -30,29 +30,30 @@ class ContactController extends Controller
             )
         {
 
-            $mail = new PHPMailer(true); // appel de php mailer avec l'exeption a true
+            $mail = new PHPMailer(); // appel de php mailer avec l'exeption a true
             try {
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER; // info sur le debug
                 $mail->isSMTP();
-                $mail->SMTPAuth= true;
                 $mail->Host = 'smtp.gmail.com';
-                $mail->Username= 'tadjerliticia@gmail.com';
-                $mail->Password= 'letty@L021112/';
+                $mail->SMTPAuth= "true";
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = "587";
+                $mail->Username= 'liticiatadjer35@gmail.com';
+                $mail->Password= 'Letty@021112/';
+                $mail->Subject = 'PORTEFOLIO MESSAGE'.$email;
+                $mail->setFrom($email);
+                $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
+
+                $mail->addAddress("liticiatadjer35@gmail.com");
+
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER; // info sur le debug
 
                 // charset
                 $mail->CharSet = "UTF-8";
                 // destinataire
-                $mail->addAddress("tadjerliticia@gmail.com");
                 // expediteur
-                $mail->setFrom($email);
 
                 // contenu
                 $mail->isHTML(true);
-                $mail->Subject = 'PORTEFOLIO MESSAGE'.$email;
-                $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
-
                 // envoi du message
 
                 $mail->send();
