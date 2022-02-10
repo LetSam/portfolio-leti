@@ -1,5 +1,19 @@
 /* OUVERTURE MENU PRINCIPAL **/
+var burger = document.querySelector('.btn-burger');
 
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+})
+
+
+function toggleMenu(){
+    const navbar = document.querySelector('.main-nav');
+    const burger = document.querySelector('.btn-burger');
+    burger.addEventListener('click',()=>{
+      navbar.classList.toggle('show-nav');
+    })
+  }
+  toggleMenu();
 
 /** SCROLL UP **/
 function scrollUp(){
@@ -27,6 +41,7 @@ function currentSlide ( index ){
 }
 
 function showSlides ( index ){
+
     const slides = document.getElementsByClassName('my-slide');
     const dots = document.getElementsByClassName('dot');
 
@@ -44,35 +59,29 @@ function showSlides ( index ){
     slides[globalIndex - 1].style.display = "block";
     dots[globalIndex - 1].className += "active";
 
-}
+}   
 
 
 /** SCROLL SECTIONS ACTIVE LINK **/
-const sections = document.querySelectorAll('section[id]')
+const sections = document.querySelectorAll('section[id]');
 
-window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive);
 
 function scrollActive(){
-    const scrollY = window.pageYOffset
+    const scrollY = window.pageYOffset;
 
     sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
+        const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+        sectionId = current.getAttribute('id');
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.main-nav a[href*=' + sectionId + ']').classList.add('active')
+            document.querySelector('.main-nav a[href*=' + sectionId + ']').classList.add('active');
         }else{
-            document.querySelector('.main-nav a[href*=' + sectionId + ']').classList.remove('active')
+            document.querySelector('.main-nav a[href*=' + sectionId + ']').classList.remove('active');
         }
     })
 }
 
-// sections.forEach(function(element){
-// 	element.addEventListener("click",function(){
-		
-// 	});
 
-
-/** DARK THEME **/
 

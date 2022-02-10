@@ -7,6 +7,6 @@
                 <a href="#projets"class="link">Projets</a>
                 <a href="#contact" class="link">Contact</a>
             </div>
-            <a href="#">Mentions légales</a>
+            <a href="mentions">Mentions légales</a>
         </div>    
 </footer>

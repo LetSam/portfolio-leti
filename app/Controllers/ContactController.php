@@ -33,12 +33,12 @@ class ContactController extends Controller
             $mail = new PHPMailer(true); // appel de php mailer avec l'exeption a true
             try {
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER; // info sur le debug
-                $mail->isSMTP();
-                $mail->SMTPAuth= true;
-                $mail->Host = 'smtp.gmail.com';
-                $mail->Username= 'liticiatadjer35@gmail.com';
+                $mail->isSMTP(); //envoie via la methode isSMTP
+                $mail->SMTPAuth= true; // activer SMTP authentication
+                $mail->Host = 'smtp.gmail.com';  // SMTP server
+                $mail->Username= 'liticiatadjer35@gmail.com'; 
                 $mail->Password= 'Letty@021112/';
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
                 $mail->Port = "587";
 
                 // charset
@@ -48,8 +48,8 @@ class ContactController extends Controller
                 // expediteur
                 $mail->setFrom($email);
 
-                // contenu
-                $mail->isHTML(true);
+                // contenu de l'email reçu
+                $mail->isHTML(true); //pour préciser que l'on interprete body en html
                 $mail->Subject = 'PORTFOLIO MESSAGE'.$email;
                 $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
 
@@ -59,22 +59,22 @@ class ContactController extends Controller
 
                 $_SESSION["alert"] = [
                     "message" => "Merci, votre message a bien été envoyé",
-                    "color" => "green"
+                    "color" => "mediumspringgreen"
                 ];
 
             } catch (Exception $ex) {
                 $_SESSION["alert"] = [
                     "message" => "Votre message n'a pas pu être envoyé",
-                    "color" => "red"
+                    "color" => "crimson"
                 ];
             }
         } else {
             $_SESSION["alert"] = [
                 "message" => "Votre message n'a pas pu être envoyé",
-                "color" => "red"
+                "color" => "crimson"
             ];
         }
-        header('Location:/portfolio-leti');
+        header('Location:/fichiers/portfolio-leti');
         die();
 
 

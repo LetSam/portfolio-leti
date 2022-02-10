@@ -3,11 +3,15 @@
 session_start();
 use App\Controllers\HomeController;
 use App\Controllers\ContactController;
+use App\Controllers\MentionsController;
 
 require_once "vendor/autoload.php";
 
 $app = new HomeController();
 $contact = new ContactController();
+$mentions = new MentionsController();
+
+
 // on casse l'url
 
 $page = explode('/', filter_var($_GET["page"]), FILTER_SANITIZE_URL);
@@ -16,11 +20,11 @@ $page = explode('/', filter_var($_GET["page"]), FILTER_SANITIZE_URL);
 // traitement de notre url
 
 try {
-    // on traie le cas où l'url est sur index.php ( donc vide )
+    // on traite le cas où l'url est sur index.php ( donc vide )
     if ( empty($_GET["page"]) ) {
         $app->home();
     } else {
-        // on va traiter tous les info a partir de index 0
+        // on va traiter toute les info à partir de index 0
         switch ($page[0]) {
             case '/':
             case 'home':
@@ -28,6 +32,9 @@ try {
                 break;
             case 'contact':
                 $contact->contact();
+                break;
+            case 'mentions':
+                $mentions->mentions();
                 break;
             case 'admin':
                 if ($page[1] === 'dashboard') {

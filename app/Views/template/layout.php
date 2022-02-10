@@ -19,7 +19,6 @@
 
 <body>
 
-
     <?php include_once "header.php" ?>
 
     <main class="main"> <?= $contents; ?> </main>
@@ -34,7 +33,6 @@
         <i class="uil uil-arrow-up scroll-up-icon"></i>
     </a>
     <!-- JS -->
-    <script src="public/js/script.js"></script>
-    <script src="public/js/form.js"></script> 
+    <script src="public/js/script.js"></script> 
 </body>
 </html>
