@@ -30,51 +30,49 @@ class ContactController extends Controller
             )
         {
 
-            $mail = new PHPMailer(true); // appel de php mailer avec l'exeption a true
+            $mail = new PHPMailer(); // appel de php mailer avec l'exeption a true
             try {
-                $mail->SMTPDebug = SMTP::DEBUG_SERVER; // info sur le debug
-                $mail->isSMTP(); //envoie via la methode isSMTP
-                $mail->SMTPAuth= true; // activer SMTP authentication
-                $mail->Host = 'smtp.gmail.com';  // SMTP server
-                $mail->Username= 'liticiatadjer35@gmail.com'; 
-                $mail->Password= 'Letty@021112/';
-                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
+                $mail->isSMTP();
+                $mail->Host = 'smtp.gmail.com';
+                $mail->SMTPAuth= "true";
+                $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = "587";
+                $mail->Username= 'liticiatadjer35@gmail.com';
+                $mail->Password= 'Letty@021112/';
+                $mail->Subject = 'PORTEFOLIO MESSAGE'.$email;
+                $mail->setFrom($email);
+                $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
+
+                $mail->addAddress("liticiatadjer35@gmail.com");
+
+                $mail->SMTPDebug = SMTP::DEBUG_SERVER; // info sur le debug
 
                 // charset
                 $mail->CharSet = "UTF-8";
                 // destinataire
-                $mail->addAddress("liticiatadjer35@gmail.com");
                 // expediteur
-                $mail->setFrom($email);
 
-                // contenu de l'email reçu
-                $mail->isHTML(true); //pour préciser que l'on interprete body en html
-                $mail->Subject = 'PORTFOLIO MESSAGE'.$email;
-                $mail->Body = '<h3> NOM : '.$nom. '<br> EMAIL : '.$email.' </h3> <br>'.$msg;
-
+                // contenu
+                $mail->isHTML(true);
                 // envoi du message
 
                 $mail->send();
 
                 $_SESSION["alert"] = [
-                    "message" => "Merci, votre message a bien été envoyé",
-                    "color" => "mediumspringgreen"
+                    "message" => "Merci, votre message a bien été envoyé !"
                 ];
 
             } catch (Exception $ex) {
                 $_SESSION["alert"] = [
                     "message" => "Votre message n'a pas pu être envoyé",
-                    "color" => "crimson"
                 ];
             }
         } else {
             $_SESSION["alert"] = [
-                "message" => "Votre message n'a pas pu être envoyé",
-                "color" => "crimson"
+                "message" => "Votre message n'a pas pu être envoyé"
             ];
         }
-        header('Location:/fichiers/portfolio-leti');
+        header('Location:/portfolio-leti');
         die();
 
 
